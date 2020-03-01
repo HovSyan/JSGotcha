@@ -1,1 +1,86 @@
+Try to guess the output/return value and if you fail try to understand the result!!!
 
+Note: the ones marked with '*' are hard.
+
+1. typeof NaN
+
+2. console.log(9999999999999999)
+
+3. 0.5 + 0.1 == 0.1
+
+4. 0.1 + 0.2 == 0.3
+
+5. Math.max()
+
+6. Math.min()
+
+7. [] + []
+
+8. [] + {}
+
+9. {} + []
+
+10. console.log({} + [])
+
+11. true + true + true === 3
+
+12. true - true
+
+13. true == 1
+
+14. true === 1
+
+15*. (!+[]+[]+![]).length
+
+16. 9 + "1"
+
+17. 91 - "1"
+
+18. [] == 0
+
+19. 
+function f() {
+	return {
+		name: "John"
+	}
+}
+f()
+
+20. 
+function f() {
+	return 
+  {
+		name: "John"
+	}
+}
+f()
+
+21. 
+var consoleStyling = 'background: #0f0; color: #fff; font-weight: bold;';
+console.log('%c A colorful message', consoleStyling);
+
+22. 
+var date = new Date();
+console.log(date.getDay());
+console.log(date.getDate());
+console.log(date.getMonth());
+
+23. null == undefined               //
+                                    // REMEMBER: undefined is equal (==) only to null and vice versa.
+24. null === undefined              //
+
+25. typeof {}
+
+26. typeof ""
+
+27. typeof []
+
+28. typeof null                    // This is an official bug in JS.
+
+29. 
+var a = b = c = d = 6;
+console.log(a + b + c + d + e)
+
+30. 
+var a = b = c = d = 6;
+console.log(a + b + c + d)
