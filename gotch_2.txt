@@ -1,0 +1,99 @@
+Try to guess the output/return value and if you fail try to understand the result!!!
+
+Note: the ones marked with '*' are hard.
+
+31. 
+function foo(a, b, c) {
+    console.log(arguments[0] === a);
+    console.log(arguments[1] === b);
+    console.log(arguments[2] === c);
+}
+foo(1, undefined, false)
+
+32.
+function foo(a, b, c) {
+    arguments.push(2)
+    console.log(arguments)
+}
+foo();                                  // REMEMBER: arguments object is not an array
+
+33. 
+function a() {
+    console.log('Inside A')
+    function b(){
+      console.log('Inside B')
+    }
+
+    return b();
+}
+
+var s = a();
+s();
+
+34.
+function a() {
+    console.log('Inside A')
+    function b(){
+      console.log('Inside B')
+    }
+
+    return b;
+}
+
+var s = a();
+s();
+
+35. 
+(function f(a) {
+  console.log('This is an automatically called function with parameter', a);
+})(108)
+
+36. 
+var add = (function () {
+  var counter = 0;
+  return function () {counter += 1; return counter}
+})();
+
+add();
+add();
+add();
+console.log(counter)
+
+37.
+const counter = 0;
+var add = (function () {
+  return function () {counter += 1; return counter}
+})();
+
+add();
+add();
+add();
+console.log(counter);
+
+38.
+{
+  const x = 1;
+  let y = 2;
+  var z = 3;
+}
+
+console.log(z);
+console.log(x)  // or console.log(y)
+
+39.
+function logArrayElements(element, index, array) {
+  console.log('a[' + index + '] = ' + element);
+}
+
+
+[2, 5, 4, 9].forEach(logArrayElements);
+
+40.
+function logArrayElements(element, index, array) {
+  console.log('a[' + index + '] = ' + element);
+}
+
+
+[2, , , 9].forEach(logArrayElements);
+
+41․
