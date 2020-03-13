@@ -93,7 +93,78 @@ function logArrayElements(element, index, array) {
   console.log('a[' + index + '] = ' + element);
 }
 
-
 [2, , , 9].forEach(logArrayElements);
 
 41․
+function foo() {
+    return {
+        name: 'John',
+        surname: 'Snow',
+        getName() {
+            return this.name
+        }
+    }
+}
+console.log(foo().getName());
+console.log(foo().getName.call({
+    name: 'Tireon',
+    surname: 'Lanester'
+}));
+
+42. 
+function foo() {
+    return {
+        name: 'bar',
+        bar() {
+            return {
+                name: 'baz',
+                baz() {
+                    console.log(this)
+                }
+            }
+        }
+    }
+}
+console.log(foo().bar().baz())
+cosnole.log(foo().bar().baz.apply())
+
+43. 
+const a = [1, 2, 3, 4];
+a.length = 2
+console.log(a[3])
+
+44. Number(' 12')
+
+45. Number('0x77') === 0x77
+
+46. isNaN(' ')
+
+47. Infinity / 6
+
+48. Infinity / -256
+
+49. Infinity / Infinity
+
+50. parseInt('.2')
+
+51. parseInt('0.2')
+
+52. null + undefined
+
+53. null + true
+
+54. null + false
+
+55. null + NaN
+
+56. 'hello' + NaN
+
+57. -([])
+
+58. -new String('hello')
+
+59. -'234'
+
+60. -([2])
+
+61. -([2, 3])
